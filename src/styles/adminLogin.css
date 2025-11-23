@@ -1,0 +1,90 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.admin-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  width: 100%;
+  background: url("https://www.shutterstock.com/image-illustration/admin-information-technology-conceptual-words-600nw-665930764.jpg") 
+    no-repeat center center/cover;
+  padding: 20px;
+}
+
+/* Admin Login Box */
+.admin-login-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  animation: fadeIn 1.2s ease-in-out;
+  width: 100%;
+  max-width: 400px; /* controlled width */
+  text-align: center;
+}
+
+/* Heading */
+.admin-login-box h3 {
+  margin-bottom: 1.5rem;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* Input Fields */
+.admin-login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+.admin-login-box input:focus {
+  border: 1px solid #ff4b2b;
+  box-shadow: 0 0 8px rgba(255, 75, 43, 0.5);
+}
+
+/* Button */
+.admin-login-box button {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  border: none;
+  padding: 12px;
+  margin-top: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.admin-login-box button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(255, 75, 43, 0.4);
+}
+
+/* Extra links (optional) */
+.admin-login-box .extra-links {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.admin-login-box .extra-links a {
+  color: #ff4b2b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.admin-login-box .extra-links a:hover {
+  color: #222;
+  text-decoration: underline;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}

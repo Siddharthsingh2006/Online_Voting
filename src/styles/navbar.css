@@ -1,0 +1,141 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #111, #111);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+  max-width: 1200px;
+  max-height: 85px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.07);
+  text-shadow: 0 0 15px #fff;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  transition: max-height 0.4s ease;
+}
+.nav-item {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  padding: 6px 2px;
+  transition: color 0.3s ease;
+}
+.nav-item::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -4px;
+  left: 0;
+  background: #fff;
+  border-radius: 2px;
+  transition: width 0.3s ease-in-out;
+}
+.nav-item:hover::after {
+  width: 100%;
+}
+.nav-item.active {
+  color: white;
+  font-weight: 600;
+}
+.nav-item.active::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+.bar {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(180deg, #111, #111);
+    text-align: center;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  .nav-links.active {
+    max-height: 400px;
+    padding: 1rem 0;
+  }
+
+  .nav-item {
+    padding: 0.8rem 0;
+    font-size: 1.1rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+.logo-img {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+.logo-link {
+  display: flex;
+  align-items: center;
+}

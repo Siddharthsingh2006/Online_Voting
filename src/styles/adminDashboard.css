@@ -1,0 +1,76 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.admin-dashboard {
+  padding: 50px 20px;
+  background: url("https://c8.alamy.com/comp/R9WT9D/elections-election-on-a-world-background-3d-rendering-world-country-map-as-political-background-concept-voting-freedom-democracy-elections-concep-R9WT9D.jpg") no-repeat center center/cover;
+  min-height: 100vh;
+  color: #111;
+}
+
+.dashboard-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.dashboard-card {
+  flex: 1;
+  /* min-width: 320px; */
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.dashboard-card h5 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.dashboard-card form {
+  display: flex;
+  gap: 10px;
+}
+
+.dashboard-card input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.dashboard-card button {
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dashboard-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.dashboard-card th,
+.dashboard-card td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+.logout-btn {
+  margin-top: 25px;
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}

@@ -1,0 +1,98 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background section */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("https://media.istockphoto.com/id/1410535683/photo/the-concept-of-electronic-voting-in-elections-voice-of-the-people-means-the-opinion-of-the.jpg?s=612x612&w=0&k=20&c=eS7PYuVsF5TV0GTT3EF0BTRLgJKe-phePeFxht6_fes=") 
+    no-repeat center center/cover;
+  padding: 20px;
+}
+
+/* Login Box */
+.login-box {
+  background: rgba(45, 47, 56, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1.2s ease-in-out;
+  width: 100%;
+  max-width: 400px;  /* keeps form at a nice width */
+  text-align: center;
+}
+
+/* Heading */
+.login-box h3 {
+  margin-bottom: 1.5rem;
+  color: #f5f5f5;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Input fields */
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+.login-box input:focus {
+  border: 1px solid #00c6ff;
+  box-shadow: 0 0 8px rgba(0, 198, 255, 0.6);
+}
+
+/* Button */
+.login-box button {
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  border: none;
+  padding: 12px;
+  margin-top: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.login-box button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 198, 255, 0.4);
+}
+
+/* Sub text (optional links like forgot password) */
+.login-box .extra-links {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.login-box .extra-links a {
+  color: #00c6ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.login-box .extra-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
