@@ -2,7 +2,6 @@ import React from "react";
 import "../styles/home.css";
 import { useNavigate } from "react-router-dom";
 
-// Import your images (put them inside src/assets folder)
 import secureVotingImg from "../assets/secure.png";
 import timeSaveImg from "../assets/time.png";
 import inclusiveImg from "../assets/inclusive.png";
@@ -22,7 +21,6 @@ function Home() {
       <section className="home-info">
         <h2>Why Choose Us?</h2>
 
-        {/* 1 - Image Left */}
         <div className="info-block">
           <img src={secureVotingImg} alt="Secure Voting" className="info-img left" />
           <p>
@@ -33,7 +31,6 @@ function Home() {
           </p>
         </div>
 
-        {/* 2 - Image Right */}
         <div className="info-block">
           <img src={timeSaveImg} alt="Save Time" className="info-img right" />
           <p>
@@ -44,7 +41,6 @@ function Home() {
           </p>
         </div>
 
-        {/* 3 - Image Left */}
         <div className="info-block">
           <img src={inclusiveImg} alt="Inclusive Voting" className="info-img left" />
           <p>
@@ -54,7 +50,6 @@ function Home() {
           </p>
         </div>
 
-        {/* 4 - Image Right */}
         <div className="info-block">
           <img src={fastCountImg} alt="Fast Counting" className="info-img right" />
           <p>
@@ -63,8 +58,7 @@ function Home() {
             and reliable results compared to traditional methods.
           </p>
         </div>
-
-        {/* 5 - Image Left */}
+        
         <div className="info-block">
           <img src={ecoFriendlyImg} alt="Eco Friendly" className="info-img left" />
           <p>

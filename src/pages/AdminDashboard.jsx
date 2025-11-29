@@ -14,7 +14,6 @@ function AdminDashboard() {
 
   const BASE_URL = "http://localhost:8081/api/admin";
 
-  // 🔹 Fetch all candidates
   const fetchCandidates = async () => {
     try {
       const response = await fetch(`${BASE_URL}/candidates`);
@@ -25,7 +24,6 @@ function AdminDashboard() {
     }
   };
 
-  // 🔹 Fetch election results
   const fetchResults = async () => {
     try {
       const response = await fetch(`${BASE_URL}/results`);
@@ -41,7 +39,6 @@ function AdminDashboard() {
     fetchResults();
   }, []);
 
-  // 🔹 Add new candidate (FIXED ✔)
   const addCandidate = async (e) => {
     e.preventDefault();
     if (!newCandidate.name.trim()) return;
@@ -69,7 +66,6 @@ function AdminDashboard() {
     }
   };
 
-  // 🔹 Logout
   const handleLogout = () => {
     if (window.confirm("Are you sure you want to logout?")) {
       localStorage.removeItem("isLoggedIn");
@@ -83,7 +79,6 @@ function AdminDashboard() {
 
       <div className="dashboard-row">
         
-        {/* Add Candidate Section */}
         <div className="dashboard-card">
           <h5>Add New Candidate</h5>
           <form onSubmit={addCandidate}>
@@ -115,8 +110,7 @@ function AdminDashboard() {
             <button type="submit">Add Candidate</button>
           </form>
         </div>
-
-        {/* Results Table */}
+        
         <div className="dashboard-card">
           <h5>Election Results</h5>
           <table>

@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
 }
-/* Footer */
 .footer {
   width: 100%;
   background: #111;
@@ -24,7 +23,6 @@
   text-align: center;
 }
 
-/* Footer Container */
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -35,7 +33,6 @@
   gap: 1.5rem;
 }
 
-/* Footer Text */
 .footer p {
   margin-bottom: 0.5rem;
   font-size: 1rem;
@@ -43,7 +40,6 @@
   line-height: 1.6;
 }
 
-/* Links */
 .footer-links {
   display: flex;
   justify-content: center;
@@ -79,7 +75,6 @@
   width: 100%;
 }
 
-/* Divider line */
 .footer-divider {
   width: 80%;
   height: 1px;
@@ -87,19 +82,16 @@
   margin: 1rem auto;
 }
 
-/* Bottom small text */
 .footer-bottom {
   font-size: 0.85rem;
   color: #aaa;
 }
 
-/* Animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .footer {
     padding: 2rem 1rem;

@@ -12,7 +12,6 @@ function Voting() {
   const [hasVoted, setHasVoted] = useState(false);
   const [votedCandidate, setVotedCandidate] = useState("");
 
-  // Load candidates & voting status
   useEffect(() => {
     if (!voterId) {
       alert("Session expired. Please login again.");
@@ -20,7 +19,6 @@ function Voting() {
       return;
     }
 
-    // Load candidates
     axios
       .get("http://localhost:8081/api/voter/candidates")
       .then((res) => setCandidates(res.data))
@@ -29,7 +27,6 @@ function Voting() {
         alert("Error loading candidates");
       });
 
-    // Check if the user has voted
     axios
       .get(`http://localhost:8081/api/voter/hasVoted/${voterId}`)
       .then((res) => setHasVoted(res.data))
@@ -39,7 +36,6 @@ function Voting() {
       });
   }, []);
 
-  // Cast vote
   const castVote = (candidateId, candidateName) => {
     if (hasVoted) {
       alert("You have already voted!");
@@ -60,7 +56,6 @@ function Voting() {
       });
   };
 
-  // Logout
   const handleLogout = () => {
     localStorage.clear();
     navigate("/login");

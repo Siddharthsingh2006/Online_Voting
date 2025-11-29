@@ -7,8 +7,7 @@ function AdminLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false); // Loading state
-
+  const [loading, setLoading] = useState(false); 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -30,15 +29,14 @@ function AdminLogin() {
           return;
         }
 
-        // Store login info
         localStorage.setItem("user", JSON.stringify({
           isLoggedIn: true,
           userId: data.userId,
           role: data.role
         }));
 
-        navigate("/admin-dashboard"); // Redirect to Admin Dashboard
-      } else {
+        navigate("/admin-dashboard"); 
+            } else {
         setError(data.message || "Login failed. Please check your credentials.");
       }
     } catch (err) {
